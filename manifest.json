@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Klasifikasi Komentar Judi Online",
+  "version": "1.1.0",
+  "description": "Mengklasifikasikan komentar promosi judi online dan menampilkan informasi edukatif.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://judol-api-cr42-bice.vercel.app/*"
+  ],
+  "action": {
+    "default_title": "Klasifikasi Komentar",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

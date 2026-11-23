@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klasifikasi Komentar</title>
+
+  <style>
+    body {
+      width: 290px;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .pengaturan {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 18px;
+      padding: 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: white;
+      font-size: 14px;
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #2563eb;
+      cursor: pointer;
+    }
+
+    #status {
+      margin-bottom: 0;
+      color: #64748b;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Klasifikasi Komentar</h1>
+
+  <p>
+    Menandai komentar yang terindikasi mengandung promosi
+    judi online dengan informasi edukatif.
+  </p>
+
+  <label class="pengaturan" for="toggleAktif">
+    <span>Aktifkan klasifikasi</span>
+    <input type="checkbox" id="toggleAktif" disabled>
+  </label>
+
+  <p id="status" role="status">Memuat pengaturan...</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
